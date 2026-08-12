@@ -121,4 +121,15 @@ export default function Admin({ view, go }) {
       </div>
       <div className="stats">
         {stats.map(([l, v, I, c]) => (
-          <div key={l} className="stat"><div className="ic" style={{ background: c + "22", color: c }}><I size={18} /></div><div className="v">{v}</div><div
+          <div key={l} className="stat">
+            <div className="ic" style={{ background: c + "22", color: c }}><I size={20} /></div>
+            <div>
+              <b style={{ fontSize: 20 }}>{v}</b>
+              <div style={{ fontSize: 13, color: "var(--muted)" }}>{l}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
