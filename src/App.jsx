@@ -34,7 +34,7 @@ export default function App() {
   }, []);
 
   if (loading) return <div className="center">Loading your club…</div>;
-  if (!session) return <PublicSite />;
+  if (!session) return <AuthModal mode="signin" onClose={() => {}} />;
   if (available.length === 0)
     return (
       <div className="center">
