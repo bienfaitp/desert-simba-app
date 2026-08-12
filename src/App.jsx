@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useAuth } from "./lib/AuthProvider";
-import { Logo } from "./lib/ui";
+import AuthModal from "./public/AuthModal";
 import PublicSite from "./public/AuthModal";
 import Admin from "./pages/Admin";
 import Parent from "./pages/Parent";
@@ -34,7 +34,7 @@ export default function App() {
   }, []);
 
   if (loading) return <div className="center">Loading your club…</div>;
-  if (!session) return <AuthModal mode="signin" onClose={() => {}} />;
+  if (!session) return <AuthModal mode="signin" onClose={() => {}} />; 
   if (available.length === 0)
     return (
       <div className="center">
