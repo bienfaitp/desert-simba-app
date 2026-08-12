@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useAuth } from "./lib/AuthProvider";
 import AuthModal from "./public/AuthModal";
-import PublicSite from "./public/AuthModal";
+
 import Admin from "./pages/Admin";
 import Parent from "./pages/Parent";
 import Coach from "./pages/Coach";
